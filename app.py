@@ -15,7 +15,7 @@ st.set_page_config(
 # Initialize NVIDIA client
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
-    api_key=nvidia_api_key
+    api_key=NVIDIA_API_KEY
 )
 
 # Initialize session state for chat history and user info
