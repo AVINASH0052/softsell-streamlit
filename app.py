@@ -12,10 +12,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# Load environment variables
-load_dotenv()
-nvidia_api_key = os.getenv("NVIDIA_API_KEY")
-
 # Initialize NVIDIA client
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
