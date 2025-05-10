@@ -30,10 +30,23 @@ A responsive, single-page marketing website for a fictional software resale star
    ```bash
    pip install -r requirements.txt
    ```
-4. Run the application:
+4. **Get your NVIDIA API key:**
+   - Go to [NVIDIA API Portal](https://platform.nvidia.com/)
+   - Sign up or log in
+   - Create an API key for the LLM service
+   - Copy your API key (it will look like `nvapi-...`)
+5. **Create a `.env` file in the project root:**
+   ```
+   NVIDIA_API_KEY=your-nvidia-key-here
+   ```
+6. Run the application:
    ```bash
    streamlit run app.py
    ```
+
+## Security Note
+- **Never commit your `.env` file or API key to GitHub.**
+- The `.env` file is included in `.gitignore` by default.
 
 ## Design Choices
 

@@ -2,6 +2,8 @@ import streamlit as st
 from openai import OpenAI
 import json
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
 # Configure Streamlit page
 st.set_page_config(
@@ -10,10 +12,14 @@ st.set_page_config(
     layout="wide"
 )
 
+# Load environment variables
+load_dotenv()
+nvidia_api_key = os.getenv("NVIDIA_API_KEY")
+
 # Initialize NVIDIA client
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
-    api_key="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"
+    api_key=nvidia_api_key
 )
 
 # Initialize session state for chat history and user info
